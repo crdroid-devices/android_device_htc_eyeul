@@ -1,4 +1,4 @@
-# Copyright (C) 2015 The CyanogenMod Project
+# Copyright (C) 2015 The crdroidandroid Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -16,11 +16,11 @@
 $(call inherit-product, device/htc/eyeul/full_eyeul.mk)
 
 # Enhanced NFC
-$(call inherit-product, vendor/cm/config/nfc_enhanced.mk)
+$(call inherit-product, vendor/crdroid/config/nfc_enhanced.mk)
 
-# Inherit some common CM stuff.
-$(call inherit-product, vendor/cm/config/common_full_phone.mk)
+# Inherit some common crdroid stuff.
+$(call inherit-product, vendor/crdroid/config/common_full_phone.mk)
 
-PRODUCT_NAME := cm_eyeul
+PRODUCT_NAME := crdroid_eyeul
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_FINGERPRINT="htc/htc_europe/htc_eyeul:5.0.2/LRX22G/504177.1:user/release-keys" PRIVATE_BUILD_DESC="2.19.401.1 CL504177 release-keys"
