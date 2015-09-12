@@ -1,4 +1,4 @@
-# Copyright (C) 2014 The CyanogenMod Project
+# Copyright (C) 2015 The CyanogenMod Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -11,6 +11,7 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+#
 
 #
 # This file sets variables that control the way modules are built
@@ -19,6 +20,10 @@
 # included in a build is to use PRODUCT_PACKAGES in a product
 # definition file).
 #
+
+# WARNING: This line must come *before* including the proprietary
+# variant, so that it gets overwritten by the parent (which goes
+# against the traditional rules of inheritance).
 
 # Model Ids
 # 0PFH10000 - AT&T/Dev Edition
@@ -140,12 +145,7 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 10200547328
 BOARD_FLASH_BLOCK_SIZE := 131072
 TARGET_RECOVERY_DEVICE_MODULES += chargeled
 TARGET_USERIMAGES_USE_EXT4 := true
-
-ifeq ($(HOST_OS),linux)
 TARGET_USERIMAGES_USE_F2FS := true
-else
-TARGET_USERIMAGES_USE_F2FS := false
-endif
 
 # Recovery
 BOARD_HAS_LARGE_FILESYSTEM := true
