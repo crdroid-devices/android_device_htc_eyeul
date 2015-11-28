@@ -38,11 +38,11 @@
 TARGET_OTA_ASSERT_DEVICE := eyeul
 
 # Kernel
-BOARD_CUSTOM_BOOTIMG_MK := device/htc/eyeul/mkbootimg.mk
 TARGET_KERNEL_CONFIG := eyeul_defconfig
 
 # Bluetooth
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/htc/eyeul/bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG    "repository": "android_external_sony_boringssl-compat",
+    "target_path": "external/sony/boringssl-compat"_INCLUDE_DIR := device/htc/eyeul/bluetooth
 
 # Camera
 COMMON_GLOBAL_CFLAGS += -DHTC_CAMERA_HARDWARE
