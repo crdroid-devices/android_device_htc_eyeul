@@ -176,7 +176,7 @@ const char CameraParameters::FOCUS_MODE_MANUAL_POSITION[] = "manual";
 const char CameraParameters::LIGHTFX_LOWLIGHT[] = "low-light";
 const char CameraParameters::LIGHTFX_HDR[] = "high-dynamic-range";
 
-// HTC settings
+// M8 values
 const char CameraParameters::KEY_TIME_CONS_POST_PROCESSING[] = "time-cons-post-processing";
 const char CameraParameters::KEY_OIS_MODE[] = "ois_mode";
 const char CameraParameters::KEY_APP_OIS_SETTING[] = "ois-setting";
@@ -229,7 +229,7 @@ CAMERA_PARAMETERS_EXTRA_C
 #endif
 
 CameraParameters::CameraParameters()
-    : CameraParameters_EXT(this), mMap()
+                : CameraParameters_EXT(this), mMap()
 {
 }
 
@@ -592,7 +592,7 @@ int CameraParameters::previewFormatToEnum(const char* format) {
         !strcmp(format, PIXEL_FORMAT_RGBA8888) ?
             HAL_PIXEL_FORMAT_RGBA_8888 :    // RGB8888
         !strcmp(format, PIXEL_FORMAT_BAYER_RGGB) ?
-            HAL_PIXEL_FORMAT_RAW_SENSOR :   // Raw sensor data
+            HAL_PIXEL_FORMAT_RAW16 :   // Raw sensor data
         -1;
 }
 

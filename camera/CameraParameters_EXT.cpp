@@ -288,3 +288,4 @@ void CameraParameters_EXT::setOrientation(int orientation)
 }
 
 } // android
+
